@@ -104,3 +104,10 @@ padding:15px;
 font-size:14px;
 letter-spacing:2px;
 }
+.boarding-image{
+width:100%;
+max-width:1200px;
+border-radius:20px;
+margin:20px auto;
+display:block;
+}
