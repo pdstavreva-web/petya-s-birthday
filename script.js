@@ -1,4 +1,13 @@
-function nextPage(page){
+function nextPage(page)if(page === 12){
+
+const music =
+document.getElementById("birthdayMusic");
+
+if(music){
+music.play();
+}
+
+}{
 
 document
 .querySelectorAll(".page")
