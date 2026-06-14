@@ -1,13 +1,4 @@
-function nextPage(page)if(page === 12){
-
-const music =
-document.getElementById("birthdayMusic");
-
-if(music){
-music.play();
-}
-
-}{
+function nextPage(page){
 
 document
 .querySelectorAll(".page")
@@ -16,6 +7,23 @@ document
 document
 .getElementById("page" + page)
 .classList.add("active");
+
+if(page === 12){
+
+confetti({
+particleCount:150,
+spread:120,
+origin:{y:0.6}
+});
+
+const music =
+document.getElementById("birthdayMusic");
+
+if(music){
+music.play();
+}
+
+}
 
 }
 
