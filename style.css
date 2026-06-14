@@ -211,3 +211,8 @@ opacity:.7;
 font-style:italic;
 white-space:nowrap;
 }
+.small-hint{
+font-size:14px;
+opacity:.7;
+margin-top:5px;
+}
