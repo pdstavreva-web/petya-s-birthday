@@ -1,4 +1,3 @@
-alert("JS зареден!");
 function nextPage(page){
 
 document
