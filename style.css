@@ -61,13 +61,12 @@ font-size:16px;
 }
 
 .ticket{
-    background:white;
-    color:black;
-    max-width:850px;
-    margin:50px auto;
-    border-radius:30px;
-    overflow:hidden;
-    box-shadow:0 0 40px rgba(168,85,247,.35);
+background:red !important;
+color:white;
+max-width:850px;
+margin:50px auto;
+padding:50px;
+}
 }
 
 .ticket-top{
