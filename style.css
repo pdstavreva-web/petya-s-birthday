@@ -111,3 +111,10 @@ border-radius:20px;
 margin:20px auto;
 display:block;
 }
+.final-photo{
+width:100%;
+max-width:500px;
+border-radius:20px;
+margin:30px auto;
+display:block;
+}
