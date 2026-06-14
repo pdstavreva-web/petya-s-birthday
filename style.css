@@ -231,3 +231,12 @@ flex-direction:column;
 align-items:center;
 gap:15px;
 }
+#page12{
+text-align:center;
+}
+
+#page12 p{
+max-width:700px;
+margin:15px auto;
+font-size:24px;
+}
