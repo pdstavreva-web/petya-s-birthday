@@ -129,3 +129,23 @@ text-decoration:underline;
 max-width:700px;
 margin:0 auto;
 }
+.gift-list{
+max-width:700px;
+margin:10px auto;
+text-align:left;
+}
+
+.gift-list li{
+margin-bottom:20px;
+line-height:1.7;
+}
+
+.gift-list a{
+color:#c4b5fd;
+font-weight:bold;
+text-decoration:none;
+}
+
+.gift-list a:hover{
+text-decoration:underline;
+}
