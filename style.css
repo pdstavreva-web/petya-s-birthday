@@ -71,3 +71,36 @@ box-sizing:border-box;
 .active{
 display:block;
 }
+.boarding-pass{
+background:white;
+color:black;
+max-width:700px;
+margin:30px auto;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 0 30px rgba(196,181,253,.4);
+}
+
+.boarding-header{
+background:#c4b5fd;
+padding:20px;
+font-size:28px;
+font-weight:bold;
+}
+
+.boarding-body{
+padding:30px;
+text-align:left;
+}
+
+.boarding-body p{
+color:black;
+margin:12px 0;
+}
+
+.boarding-footer{
+background:#f3f4f6;
+padding:15px;
+font-size:14px;
+letter-spacing:2px;
+}
