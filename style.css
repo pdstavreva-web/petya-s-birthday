@@ -56,7 +56,9 @@ font-size:20px;
 line-height:1.4;
 margin:10px 0;
 }
-
+.gift-list{
+margin-top:5px;
+}
 .page{
 display:none;
 min-height:100vh;
