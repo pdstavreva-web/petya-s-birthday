@@ -98,17 +98,103 @@ margin-bottom:8px;
 
 h1{
 margin-bottom:22px;
-document.addEventListener("DOMContentLoaded", () => {
-  const effects = document.createElement("div");
-  effects.setAttribute("aria-hidden", "true");
-  effects.innerHTML = `
-    <div class="skyline-plane">✈️</div>
-    <div class="skyline-plane plane-two">🛩️</div>
-    <div class="skyline-plane plane-three">✈️</div>
-    <div class="birthday-spark spark-one"></div>
-    <div class="birthday-spark spark-two"></div>
-    <div class="birthday-spark spark-three"></div>
-    <div class="birthday-spark spark-four"></div>
-  `;
-  document.body.appendChild(effects);
-});
+/* Add this at the very bottom of style.css. */
+
+body::after{
+content:"30";
+position:fixed;
+right:clamp(18px,4vw,54px);
+top:clamp(16px,4vw,46px);
+z-index:0;
+pointer-events:none;
+font-size:clamp(64px,12vw,180px);
+font-weight:800;
+line-height:1;
+color:rgba(216,180,254,.075);
+text-shadow:0 0 40px rgba(216,180,254,.16);
+}
+
+.page{
+overflow:hidden;
+isolation:isolate;
+}
+
+.page > *,
+.content{
+position:relative;
+z-index:2;
+}
+
+.skyline-plane{
+position:fixed;
+left:-110px;
+top:18%;
+z-index:1;
+pointer-events:none;
+font-size:34px;
+opacity:.42;
+filter:drop-shadow(0 0 16px rgba(216,180,254,.55));
+animation:flyAcross 16s linear infinite;
+}
+
+.skyline-plane.plane-two{
+top:72%;
+font-size:26px;
+opacity:.28;
+animation-duration:22s;
+animation-delay:5s;
+}
+
+.skyline-plane.plane-three{
+top:44%;
+font-size:22px;
+opacity:.22;
+animation-duration:28s;
+animation-delay:11s;
+}
+
+.birthday-spark{
+position:fixed;
+z-index:1;
+pointer-events:none;
+width:6px;
+height:6px;
+border-radius:999px;
+background:#f5d0fe;
+box-shadow:0 0 18px #d8b4fe,0 0 30px rgba(216,180,254,.5);
+opacity:.55;
+animation:sparkFloat 7s ease-in-out infinite;
+}
+
+.spark-one{left:12%;top:22%;}
+.spark-two{left:82%;top:28%;animation-delay:1.4s;}
+.spark-three{left:18%;top:78%;animation-delay:2.2s;}
+.spark-four{left:76%;top:82%;animation-delay:3.1s;}
+
+@keyframes flyAcross{
+0%{
+transform:translateX(-120px) translateY(0) rotate(8deg);
+}
+45%{
+transform:translateX(52vw) translateY(-22px) rotate(8deg);
+}
+100%{
+transform:translateX(calc(100vw + 180px)) translateY(18px) rotate(8deg);
+}
+}
+
+@keyframes sparkFloat{
+0%,100%{
+transform:translateY(0) scale(.8);
+opacity:.25;
+}
+50%{
+transform:translateY(-18px) scale(1.25);
+opacity:.75;
+}
+}
+
+@media(max-width:700px){
+.skyline-plane{
+font-size:26px;
+opacity:.26;
