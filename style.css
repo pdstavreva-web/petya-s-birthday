@@ -299,3 +299,25 @@ white-space:normal;
     padding:13px 22px !important;
   }
 }
+/* Smaller first-page title on phones */
+@media (max-width: 600px){
+  #page1 h1{
+    font-size:30px !important;
+    line-height:1.15;
+    max-width:320px;
+    margin-bottom:18px;
+  }
+
+  #page1 p{
+    font-size:16px !important;
+    line-height:1.45 !important;
+    max-width:320px;
+  }
+
+  #page1 button{
+    font-size:16px !important;
+    padding:13px 22px !important;
+    max-width:320px;
+    white-space:normal;
+  }
+}
