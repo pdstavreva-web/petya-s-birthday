@@ -377,43 +377,48 @@ display:none;
     padding:12px 20px;
   }
 }
-/* Brutal denied-access ending */
+/* Brutal denied-access ending - stronger mobile version */
 #page14.page.active{
+min-height:100svh;
+justify-content:center;
 background:
-radial-gradient(circle at center, rgba(239,68,68,.18), transparent 42%),
-linear-gradient(145deg,#120104 0%,#050000 55%,#000 100%);
+linear-gradient(rgba(127,29,29,.18), rgba(127,29,29,.18)),
+repeating-linear-gradient(
+  45deg,
+  rgba(239,68,68,.16) 0 10px,
+  transparent 10px 22px
+),
+linear-gradient(145deg,#1a0205 0%,#050000 58%,#000 100%) !important;
 color:#fff;
 overflow:hidden;
+border:6px solid rgba(239,68,68,.55);
+box-shadow:inset 0 0 80px rgba(239,68,68,.45);
 }
 
 #page14.page.active::before{
-content:"";
-position:absolute;
-inset:-40px;
-z-index:0;
-pointer-events:none;
-background:
-repeating-linear-gradient(
-  -12deg,
-  rgba(239,68,68,.13) 0 2px,
-  transparent 2px 12px
-);
-animation:dangerMove 1.8s linear infinite;
-}
-
-#page14.page.active::after{
 content:"ACCESS DENIED";
 position:absolute;
 left:50%;
-top:50%;
-z-index:0;
-transform:translate(-50%,-50%) rotate(-12deg);
-font-size:clamp(42px, 16vw, 140px);
+top:18%;
+transform:translateX(-50%) rotate(-8deg);
+z-index:1;
+font-size:clamp(28px, 10vw, 96px);
 font-weight:900;
-line-height:1;
 letter-spacing:.08em;
-color:rgba(239,68,68,.12);
+color:rgba(248,113,113,.28);
 white-space:nowrap;
+text-shadow:0 0 18px rgba(239,68,68,.55);
+}
+
+#page14.page.active::after{
+content:"";
+position:absolute;
+inset:14px;
+z-index:1;
+pointer-events:none;
+border:2px dashed rgba(248,113,113,.75);
+box-shadow:0 0 28px rgba(239,68,68,.45);
+animation:alarmPulse .8s infinite alternate;
 }
 
 #page14 > *{
@@ -422,66 +427,96 @@ z-index:2;
 }
 
 #page14 .the-end{
-font-size:clamp(44px, 14vw, 110px);
+font-size:clamp(56px, 18vw, 130px);
 line-height:1;
 color:#fff;
+margin-bottom:20px;
 text-shadow:
-0 0 12px rgba(239,68,68,.9),
-0 0 34px rgba(239,68,68,.7),
-4px 4px 0 #7f1d1d;
-animation:endGlitch .9s infinite;
+0 0 10px #ef4444,
+0 0 26px #ef4444,
+5px 5px 0 #7f1d1d;
+animation:endShake .45s infinite;
 }
 
 #page14 p{
-font-size:clamp(16px, 4vw, 22px);
-font-weight:700;
+max-width:340px;
+font-size:clamp(16px, 4.5vw, 22px);
+font-weight:800;
+line-height:1.35;
 text-transform:uppercase;
 letter-spacing:.04em;
 color:#fecaca;
-text-shadow:0 0 12px rgba(239,68,68,.45);
 }
 
-@keyframes endGlitch{
-0%,100%{
-transform:translate(0);
-filter:none;
-}
-20%{
-transform:translate(-2px,1px);
-filter:contrast(1.4);
-}
-40%{
-transform:translate(2px,-1px);
-}
-60%{
-transform:translate(-1px,-2px);
-}
-80%{
-transform:translate(1px,2px);
-}
+@keyframes endShake{
+0%,100%{ transform:translate(0,0) rotate(0); }
+25%{ transform:translate(-2px,1px) rotate(-1deg); }
+50%{ transform:translate(2px,-1px) rotate(1deg); }
+75%{ transform:translate(-1px,-2px) rotate(0); }
 }
 
-@keyframes dangerMove{
-from{
-transform:translateX(0);
-}
-to{
-transform:translateX(24px);
-}
+@keyframes alarmPulse{
+from{ opacity:.45; transform:scale(.985); }
+to{ opacity:1; transform:scale(1); }
 }
 
 @media (max-width:600px){
   #page14.page.active{
-    padding:34px 16px;
+    padding:30px 16px;
+    border-width:4px;
+  }
+
+  #page14.page.active::before{
+    top:16%;
+    font-size:34px;
   }
 
   #page14 .the-end{
-    font-size:52px;
+    font-size:64px;
   }
 
   #page14 p{
+    /* Final polish */
+@media (max-width:600px){
+  #page3 h2,
+  #page4 h1,
+  #page5 h1,
+  #page8 h1,
+  #page9 h1,
+  #page13 h1,
+  #page11 h1{
+    font-size:24px;
+  }
+
+  #page3 button,
+  #page4 button,
+  #page9 button,
+  #page13 button{
+    width:100%;
+    max-width:320px;
+  }
+
+  #page11 p:first-of-type{
+    font-size:18px;
+    letter-spacing:.08em;
+    color:#f0abfc;
+  }
+
+  #page12.page.active{
+    padding:28px 16px 36px;
+  }
+
+  #page12 .final-photo{
+    max-height:62vh;
+    object-fit:contain;
+    border-radius:18px;
+    box-shadow:0 18px 45px rgba(0,0,0,.38);
+  }
+
+  #page12 p{
     font-size:15px;
-    line-height:1.45;
-    letter-spacing:.03em;
+  }
+}
+    font-size:15px;
   }
 }
