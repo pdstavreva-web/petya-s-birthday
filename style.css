@@ -491,3 +491,53 @@ transform:rotate(-8deg) scale(1.04);
     font-size:11px;
   }
 }
+/* Strong mobile warning animation */
+@media (max-width:600px){
+  #page14 .warning-strip{
+    left:-70% !important;
+    bottom:26px !important;
+    width:240% !important;
+    padding:11px 0 !important;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        #ef4444 0 22px,
+        #fca5a5 22px 34px,
+        #ef4444 34px 56px
+      ) !important;
+    color:#000 !important;
+    font-size:12px !important;
+    font-weight:900 !important;
+    letter-spacing:.1em !important;
+    text-shadow:
+      0 0 4px rgba(255,255,255,.9),
+      0 0 10px rgba(255,255,255,.65);
+    box-shadow:
+      0 0 22px rgba(248,113,113,1),
+      0 0 55px rgba(239,68,68,.95),
+      0 0 120px rgba(239,68,68,.8) !important;
+    animation:
+      mobileWarningSlide 1.6s linear infinite,
+      mobileWarningFlash .45s steps(2,end) infinite !important;
+  }
+}
+
+@keyframes mobileWarningSlide{
+  from{
+    transform:rotate(-4deg) translateX(0);
+  }
+  to{
+    transform:rotate(-4deg) translateX(90px);
+  }
+}
+
+@keyframes mobileWarningFlash{
+  0%{
+    filter:brightness(1);
+    opacity:.82;
+  }
+  100%{
+    filter:brightness(1.8);
+    opacity:1;
+  }
+}
