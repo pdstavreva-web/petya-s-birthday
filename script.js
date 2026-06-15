@@ -74,5 +74,3 @@ if(noBtn){
     noBtn.textContent = "Не толкова лесно 😇";
   });
 }
-  });
-}
