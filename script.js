@@ -1,4 +1,4 @@
-function nextPage(page) {
+window.nextPage = function(page) {
   document
     .querySelectorAll(".page")
     .forEach((p) => p.classList.remove("active"));
@@ -26,7 +26,7 @@ function nextPage(page) {
       });
     }
   }
-}
+};
 
 const noBtn = document.getElementById("noBtn");
 
@@ -39,11 +39,4 @@ if (noBtn) {
     noBtn.style.left = x + "px";
     noBtn.style.top = y + "px";
   });
-}
-.boarding-image{
-width:100%;
-max-width:850px;
-display:block;
-margin:30px auto;
-border-radius:20px;
 }
