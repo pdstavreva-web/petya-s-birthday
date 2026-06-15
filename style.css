@@ -280,3 +280,100 @@ padding:11px 12px;
     padding:11px 18px;
   }
 }
+/* Professional check-in page */
+#page2.page.active{
+justify-content:center;
+padding:32px 18px 42px;
+}
+
+#page2 .content{
+max-width:620px;
+text-align:left;
+}
+
+#page2 h1{
+text-align:center;
+font-size:clamp(28px, 7vw, 44px);
+line-height:1.12;
+margin-bottom:22px;
+}
+
+#page2 p{
+text-align:left;
+font-size:clamp(16px, 4vw, 19px);
+line-height:1.55;
+margin:12px 0;
+max-width:none;
+}
+
+#page2 .checkin-list{
+list-style:none;
+padding:0;
+margin:14px 0 20px;
+max-width:none;
+}
+
+#page2 .checkin-list li{
+position:relative;
+font-size:clamp(15px, 3.9vw, 18px);
+line-height:1.45;
+margin:0 0 10px;
+padding:12px 14px 12px 38px;
+border:1px solid rgba(216,180,254,.2);
+border-radius:12px;
+background:rgba(255,255,255,.055);
+}
+
+#page2 .checkin-list li::before{
+content:"✓";
+position:absolute;
+left:14px;
+top:50%;
+transform:translateY(-50%);
+color:#f0abfc;
+font-weight:800;
+}
+
+#page2 .continue-text{
+text-align:center;
+opacity:.75;
+font-size:14px !important;
+margin-top:18px !important;
+}
+
+#page2 button{
+display:flex;
+margin:16px auto 0 !important;
+}
+
+#page2 br{
+display:none;
+}
+
+@media (max-width:600px){
+  #page2.page.active{
+    justify-content:flex-start;
+    padding:26px 16px 36px;
+  }
+
+  #page2 h1{
+    font-size:26px;
+    margin-bottom:18px;
+  }
+
+  #page2 p{
+    font-size:15px;
+    line-height:1.48;
+    margin:10px 0;
+  }
+
+  #page2 .checkin-list li{
+    font-size:14.5px;
+    padding:11px 12px 11px 36px;
+  }
+
+  #page2 button{
+    font-size:15px;
+    padding:12px 20px;
+  }
+}
