@@ -70,7 +70,6 @@ if(noBtn){
     noBtn.style.zIndex = "20";
   });
 
-  noBtn.addEventListener("click", () => {
-    noBtn.textContent = "Не толкова лесно 😇";
-  });
-}
+noBtn.addEventListener("click", () => {
+  noBtn.textContent = "Не е толкова лесно 😇";
+});
