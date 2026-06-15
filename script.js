@@ -73,3 +73,7 @@ if(noBtn){
 noBtn.addEventListener("click", () => {
   noBtn.textContent = "Не е толкова лесно 😇";
 });
+
+noBtn.addEventListener("touchstart", () => {
+  noBtn.textContent = "Не е толкова лесно 😇";
+});
