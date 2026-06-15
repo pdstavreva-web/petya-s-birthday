@@ -72,5 +72,7 @@ if(noBtn){
 
   noBtn.addEventListener("click", () => {
     noBtn.textContent = "Не толкова лесно 😇";
+
+    <script src="script.js?v=5"></script>
   });
 }
