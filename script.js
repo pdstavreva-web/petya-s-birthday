@@ -40,3 +40,10 @@ if (noBtn) {
     noBtn.style.top = y + "px";
   });
 }
+.boarding-image{
+width:100%;
+max-width:850px;
+display:block;
+margin:30px auto;
+border-radius:20px;
+}
