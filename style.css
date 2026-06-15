@@ -377,3 +377,111 @@ display:none;
     padding:12px 20px;
   }
 }
+/* Brutal denied-access ending */
+#page14.page.active{
+background:
+radial-gradient(circle at center, rgba(239,68,68,.18), transparent 42%),
+linear-gradient(145deg,#120104 0%,#050000 55%,#000 100%);
+color:#fff;
+overflow:hidden;
+}
+
+#page14.page.active::before{
+content:"";
+position:absolute;
+inset:-40px;
+z-index:0;
+pointer-events:none;
+background:
+repeating-linear-gradient(
+  -12deg,
+  rgba(239,68,68,.13) 0 2px,
+  transparent 2px 12px
+);
+animation:dangerMove 1.8s linear infinite;
+}
+
+#page14.page.active::after{
+content:"ACCESS DENIED";
+position:absolute;
+left:50%;
+top:50%;
+z-index:0;
+transform:translate(-50%,-50%) rotate(-12deg);
+font-size:clamp(42px, 16vw, 140px);
+font-weight:900;
+line-height:1;
+letter-spacing:.08em;
+color:rgba(239,68,68,.12);
+white-space:nowrap;
+}
+
+#page14 > *{
+position:relative;
+z-index:2;
+}
+
+#page14 .the-end{
+font-size:clamp(44px, 14vw, 110px);
+line-height:1;
+color:#fff;
+text-shadow:
+0 0 12px rgba(239,68,68,.9),
+0 0 34px rgba(239,68,68,.7),
+4px 4px 0 #7f1d1d;
+animation:endGlitch .9s infinite;
+}
+
+#page14 p{
+font-size:clamp(16px, 4vw, 22px);
+font-weight:700;
+text-transform:uppercase;
+letter-spacing:.04em;
+color:#fecaca;
+text-shadow:0 0 12px rgba(239,68,68,.45);
+}
+
+@keyframes endGlitch{
+0%,100%{
+transform:translate(0);
+filter:none;
+}
+20%{
+transform:translate(-2px,1px);
+filter:contrast(1.4);
+}
+40%{
+transform:translate(2px,-1px);
+}
+60%{
+transform:translate(-1px,-2px);
+}
+80%{
+transform:translate(1px,2px);
+}
+}
+
+@keyframes dangerMove{
+from{
+transform:translateX(0);
+}
+to{
+transform:translateX(24px);
+}
+}
+
+@media (max-width:600px){
+  #page14.page.active{
+    padding:34px 16px;
+  }
+
+  #page14 .the-end{
+    font-size:52px;
+  }
+
+  #page14 p{
+    font-size:15px;
+    line-height:1.45;
+    letter-spacing:.03em;
+  }
+}
