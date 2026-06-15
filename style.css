@@ -198,3 +198,58 @@ opacity:.75;
 .skyline-plane{
 font-size:26px;
 opacity:.26;
+.skyline-plane{
+position:fixed;
+left:-110px;
+top:18%;
+z-index:1;
+pointer-events:none;
+font-size:34px;
+opacity:.42;
+filter:drop-shadow(0 0 16px rgba(216,180,254,.55));
+animation:flyAcross 16s linear infinite;
+}
+
+.skyline-plane.plane-two{
+top:72%;
+font-size:26px;
+opacity:.28;
+animation-duration:22s;
+animation-delay:5s;
+}
+
+.skyline-plane.plane-three{
+top:44%;
+font-size:22px;
+opacity:.22;
+animation-duration:28s;
+animation-delay:11s;
+}
+
+.birthday-spark{
+position:fixed;
+z-index:1;
+pointer-events:none;
+width:6px;
+height:6px;
+border-radius:999px;
+background:#f5d0fe;
+box-shadow:0 0 18px #d8b4fe,0 0 30px rgba(216,180,254,.5);
+opacity:.55;
+animation:sparkFloat 7s ease-in-out infinite;
+}
+
+.spark-one{left:12%;top:22%;}
+.spark-two{left:82%;top:28%;animation-delay:1.4s;}
+.spark-three{left:18%;top:78%;animation-delay:2.2s;}
+.spark-four{left:76%;top:82%;animation-delay:3.1s;}
+
+@keyframes flyAcross{
+0%{transform:translateX(-120px) translateY(0) rotate(8deg);}
+45%{transform:translateX(52vw) translateY(-22px) rotate(8deg);}
+100%{transform:translateX(calc(100vw + 180px)) translateY(18px) rotate(8deg);}
+}
+
+@keyframes sparkFloat{
+0%,100%{transform:translateY(0) scale(.8);opacity:.25;}
+50%{transform:translateY(-18
