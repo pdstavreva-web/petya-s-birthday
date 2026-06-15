@@ -148,3 +148,20 @@ transition:.25s;
 button:hover{
 transform:translateY(-3px);
 }
+.checkin-list{
+list-style:none;
+padding:0;
+margin:10px auto 0;
+max-width:500px;
+}
+
+.checkin-list li{
+margin:8px 0;
+font-size:20px;
+}
+
+.continue-text{
+opacity:.75;
+font-size:18px;
+margin-top:25px;
+}
