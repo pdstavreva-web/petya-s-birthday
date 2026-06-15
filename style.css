@@ -271,53 +271,10 @@ white-space:normal;
 }
 /* Smaller gift guide text on phones */
 @media (max-width: 600px){
-  #page10.page.active{
-    padding:24px 16px 40px;
-  }
-
-  #page10 h1{
-    font-size:28px !important;
-    line-height:1.15;
-    margin-bottom:18px;
-  }
-
-  #page10 p{
-    font-size:15px !important;
-    line-height:1.45 !important;
-    margin:10px 0 !important;
-  }
-
-  #page10 .gift-list li{
-    font-size:15px !important;
-    line-height:1.45;
-    padding:12px 14px;
-    margin-bottom:12px;
-  }
-
-  #page10 button{
-    font-size:16px !important;
-    padding:13px 22px !important;
-  }
-}
-/* Smaller first-page title on phones */
-@media (max-width: 600px){
   #page1 h1{
-    font-size:30px !important;
+    font-size:24px !important;
     line-height:1.15;
-    max-width:320px;
-    margin-bottom:18px;
-  }
-
-  #page1 p{
-    font-size:16px !important;
-    line-height:1.45 !important;
-    max-width:320px;
-  }
-
-  #page1 button{
-    font-size:16px !important;
-    padding:13px 22px !important;
-    max-width:320px;
-    white-space:normal;
+    white-space:nowrap;
+    max-width:100%;
   }
 }
