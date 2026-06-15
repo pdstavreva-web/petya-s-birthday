@@ -166,3 +166,33 @@ opacity:.75;
 font-size:18px;
 margin-top:25px;
 }
+.content{
+padding-inline:16px;
+}
+
+.gift-list{
+text-align:left;
+padding-left:22px;
+max-width:700px;
+margin:18px auto;
+}
+
+.gift-list li{
+font-size:clamp(16px, 4vw, 20px);
+line-height:1.55;
+margin-bottom:14px;
+}
+
+textarea{
+width:min(100%, 520px);
+min-height:120px;
+font:inherit;
+padding:14px 16px;
+border-radius:18px;
+border:none;
+}
+
+img{
+max-width:100%;
+height:auto;
+}
