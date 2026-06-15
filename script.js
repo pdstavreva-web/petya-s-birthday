@@ -60,7 +60,11 @@ window.nextPage = function(page){
 const noBtn = document.getElementById("noBtn");
 
 if(noBtn){
-  const teaseNoButton = () => {
+  const teaseNoButton = (event) => {
+    if(event){
+      event.preventDefault();
+    }
+
     noBtn.textContent = "Не е толкова лесно 😇";
 
     const x = Math.random() * Math.max(0, window.innerWidth - 260);
@@ -72,7 +76,7 @@ if(noBtn){
     noBtn.style.zIndex = "20";
   };
 
-  noBtn.addEventListener("mouseover", teaseNoButton);
+  noBtn.addEventListener("pointerdown", teaseNoButton);
+  noBtn.addEventListener("mouseenter", teaseNoButton);
   noBtn.addEventListener("click", teaseNoButton);
-  noBtn.addEventListener("touchstart", teaseNoButton);
 }
