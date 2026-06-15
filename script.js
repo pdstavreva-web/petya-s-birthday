@@ -1,28 +1,57 @@
-window.nextPage = function(page) {
+window.nextPage = function(page){
   document
     .querySelectorAll(".page")
-    .forEach((p) => p.classList.remove("active"));
+    .forEach((section) => section.classList.remove("active"));
 
   const target = document.getElementById("page" + page);
 
-  if (target) {
-    target.classList.add("active");
+  if(!target){
+    return;
   }
 
-  if (page === 12) {
-    if (typeof confetti === "function") {
+  target.classList.add("active");
+  window.scrollTo({ top: 0, behavior: "smooth" });
+
+  if(page === 12){
+    if(typeof confetti === "function"){
       confetti({
-        particleCount: 180,
-        spread: 120,
-        origin: { y: 0.6 },
+        particleCount: 220,
+        spread: 130,
+        origin: { y: 0.62 },
       });
+
+      setTimeout(() => {
+        confetti({
+          particleCount: 120,
+          spread: 90,
+          origin: { x: 0.18, y: 0.75 },
+        });
+
+        confetti({
+          particleCount: 120,
+          spread: 90,
+          origin: { x: 0.82, y: 0.75 },
+        });
+      }, 450);
     }
 
     const music = document.getElementById("birthdayMusic");
 
-    if (music) {
+    if(music){
+      music.volume = 0.72;
       music.play().catch(() => {
-        console.log("Autoplay blocked");
+        const existingButton = document.getElementById("musicStartButton");
+
+        if(existingButton){
+          return;
+        }
+
+        const button = document.createElement("button");
+        button.id = "musicStartButton";
+        button.type = "button";
+        button.textContent = "🎵 Пусни музиката";
+        button.addEventListener("click", () => music.play());
+        target.appendChild(button);
       });
     }
   }
@@ -30,13 +59,18 @@ window.nextPage = function(page) {
 
 const noBtn = document.getElementById("noBtn");
 
-if (noBtn) {
+if(noBtn){
   noBtn.addEventListener("mouseover", () => {
-    const x = Math.random() * Math.max(0, window.innerWidth - 250);
-    const y = Math.random() * Math.max(0, window.innerHeight - 80);
+    const x = Math.random() * Math.max(0, window.innerWidth - 260);
+    const y = Math.random() * Math.max(0, window.innerHeight - 90);
 
     noBtn.style.position = "fixed";
     noBtn.style.left = x + "px";
     noBtn.style.top = y + "px";
+    noBtn.style.zIndex = "20";
+  });
+
+  noBtn.addEventListener("click", () => {
+    noBtn.textContent = "Не толкова лесно 😇";
   });
 }
