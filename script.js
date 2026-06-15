@@ -60,7 +60,9 @@ window.nextPage = function(page){
 const noBtn = document.getElementById("noBtn");
 
 if(noBtn){
-  noBtn.addEventListener("mouseover", () => {
+  const teaseNoButton = () => {
+    noBtn.textContent = "Не е толкова лесно 😇";
+
     const x = Math.random() * Math.max(0, window.innerWidth - 260);
     const y = Math.random() * Math.max(0, window.innerHeight - 90);
 
@@ -68,12 +70,9 @@ if(noBtn){
     noBtn.style.left = x + "px";
     noBtn.style.top = y + "px";
     noBtn.style.zIndex = "20";
-  });
+  };
 
-noBtn.addEventListener("click", () => {
-  noBtn.textContent = "Не е толкова лесно 😇";
-});
-
-noBtn.addEventListener("touchstart", () => {
-  noBtn.textContent = "Не е толкова лесно 😇";
-});
+  noBtn.addEventListener("mouseover", teaseNoButton);
+  noBtn.addEventListener("click", teaseNoButton);
+  noBtn.addEventListener("touchstart", teaseNoButton);
+}
