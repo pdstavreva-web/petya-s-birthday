@@ -261,3 +261,23 @@ max-width:700px;
 margin:0 auto;
 text-align:left;
 }
+
+#page2{
+text-align:center;
+}
+
+#page2 h1{
+font-size:48px;
+margin-bottom:30px;
+}
+
+#page2 p{
+font-size:20px;
+line-height:1.8;
+margin:15px 0;
+}
+
+#page2 button{
+display:block;
+margin:40px auto;
+}
